@@ -1,0 +1,2 @@
+pendulum~=3.0.0
+bcrypt~=4.3.0
