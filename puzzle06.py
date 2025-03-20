@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def load(filename):
     with open(filename) as f:
         words, puzzle = f.read().split('\n\n')
@@ -22,6 +19,10 @@ def fix_word_list(words):
 def solve(filename):
     words, puzzle = load(filename)
     words = list(fix_word_list(words))
+    return solve_puzzle(words, puzzle)
+
+
+def solve_puzzle(words, puzzle):
     solution = 0
     for line in puzzle:
         length = len(line.strip())
